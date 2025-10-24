@@ -1,0 +1,96 @@
+:root {
+    --bsod-bg-color: #0000AA;
+    --bsod-text-color: #FFFFFF; 
+    --bsod-highlight-color: #C0C0C0; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--bsod-bg-color); 
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;    
+    font-family: 'Lucida Console', 'Consolas', monospace; 
+    color: var(--bsod-text-color);
+    overflow: hidden;
+    position: relative;
+    padding: 40px; 
+    line-height: 1.5; /
+}
+
+
+
+.bsod-container {
+    text-align: center; 
+    z-index: 2;
+    max-width: 800px; 
+    background: none;
+    border: none;
+    box-shadow: none;
+    opacity: 0;
+    animation: fadeInBsod 2s ease forwards;
+}
+
+@keyframes fadeInBsod {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.bsod-header {
+    background-color: var(--bsod-bg-color); 
+    color: var(--bsod-text-color);
+    font-size: 1.1em; 
+    font-weight: normal;
+    padding: 0 5px;
+    margin-bottom: 20px; 
+    display: inline-block; 
+    border: 1px solid var(--bsod-text-color); 
+}
+
+.bsod-text {
+    font-size: 1em; 
+    margin-bottom: 15px; 
+}
+
+.bsod-list {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.bsod-list li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px; 
+}
+
+.bsod-list li::before {
+    content: '* '; 
+    position: absolute;
+    left: 0;
+    color: var(--bsod-text-color);
+}
+
+.bsod-instruction {
+    margin-top: 40px;
+    font-size: 1em;
+    text-align: center; 
+}
+
+.blinking-cursor {
+    animation: blinkCursor 1s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
