@@ -3,139 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b09">
-  <meta name="description" content="Portfólio de Braian Lopes Saldanha, desenvolvedor Front-end. Conheça meus projetos, minha stack e meu jeito de transformar ideias em interfaces web.">
+  <meta name="theme-color" content="#060a08">
+  <meta name="description" content="Duas pílulas. Dois caminhos. Entre no universo de código de Braian Saldanha e conheça seu portfólio de desenvolvimento Front-end.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Braian Saldanha — Desenvolvedor Front-end">
-  <meta property="og:description" content="Ideias fora da simulação. Interfaces construídas com HTML, CSS e JavaScript. Explore meus projetos.">
+  <meta property="og:title" content="Braian Saldanha — A escolha é sua">
+  <meta property="og:description" content="Escolha sua pílula e descubra meu universo de código. Portfólio Front-end inspirado em Matrix.">
   <meta name="color-scheme" content="dark">
-  <title>Braian Saldanha — Desenvolvedor Front-end</title>
+  <title>Braian Saldanha — A escolha é sua</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="stylestart.css">
+  <script src="scriptstart.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
-    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></symbol>
-    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7M15 22v-3.8a3.3 3.3 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.9a5.4 5.4 0 0 0-1.5-3.7A5 5 0 0 0 18.6 1S17.4.6 15 2.4a13.4 13.4 0 0 0-6 0C6.6.6 5.4 1 5.4 1A5 5 0 0 0 5.2 5a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.2 6.5 6.2 6.9A3.3 3.3 0 0 0 9 18.2V22"/></symbol>
-    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4 9v12M4 3v.1M10 21V9h5v2c1-3 6-3 6 2v8M2 9h4M2 21h4M2 3a2 2 0 1 0 4 0 2 2 0 1 0-4 0"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
-    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
-    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
-    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
-    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></symbol>
-  </svg>
+<body class="gateway">
+  <a class="skip-link" href="#escolha">Pular para a escolha das pílulas</a>
+  <canvas id="gatewayRain" class="matrix-rain" aria-hidden="true"></canvas>
+  <div class="gateway-grid" aria-hidden="true"></div>
+  <div class="code-trace trace-left" aria-hidden="true">01001000<br>01100101<br>01101100<br>01101100<br>01101111<br>00100000<br>01001110<br>01100101<br>01101111</div>
+  <div class="code-trace trace-right" aria-hidden="true">01100011<br>01101111<br>01100100<br>01100101<br>00100000<br>01101001<br>01110011<br>00100000<br>01110010<br>01100101<br>01100001<br>01101100</div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Braian Saldanha, início"><span class="brand-mark">b<span>/</span>s<span class="brand-dot">.</span></span><span class="brand-caption">BRAIAN<br>SALDANHA</span></a>
-      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
-        <a href="#projetos"><span>01.</span> Projetos</a>
-        <a href="#sobre"><span>02.</span> Sobre</a>
-        <a href="#stack"><span>03.</span> Stack</a>
-        <a class="nav-contact" href="#contato">Vamos conversar <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
-    </div>
+  <header class="gateway-header shell">
+    <a class="gateway-brand" href="index.html" aria-label="Braian Saldanha, tela de escolha"><span class="brand-mark">b<span>/</span>s<span>.</span></span><span class="brand-name">BRAIAN<br>SALDANHA</span></a>
+    <div class="header-tools"><span class="header-caption" aria-hidden="true">THE CONSTRUCT / 01</span><button class="motion-toggle" id="gatewayEffects" type="button" aria-label="Pausar animações de fundo" aria-pressed="false" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span class="motion-label">Pausar efeitos</span></button></div>
   </header>
 
-  <main id="conteudo">
-    <section class="hero" id="home" aria-labelledby="heroTitle">
-      <div class="hero-grid-background" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> DESENVOLVEDOR FRONT-END</p>
-            <h1 id="heroTitle">Braian<br><span>Saldanha<span class="cursor" aria-hidden="true">_</span></span></h1>
-            <p class="hero-statement">Sua ideia.<br>O próximo código que eu escrevo.</p>
-            <p class="hero-description">Construo interfaces web com atenção ao visual, à experiência de quem usa e aos detalhes que fazem a diferença.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#projetos">Explorar projetos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="button button-text" href="https://github.com/braiansaldanha-byte" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Meu GitHub <svg class="icon small" aria-hidden="true"><use href="#i-external"/></svg></a>
-            </div>
-            <div class="hero-footnote"><span class="mono" aria-hidden="true">&lt;/&gt;</span> Código com propósito. Interfaces com personalidade.</div>
-          </div>
+  <main class="gateway-main" id="escolha">
+    <div class="gateway-heading">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> BEM-VINDO AO MEU UNIVERSO</p>
+      <h1>Tudo começa<br>com uma <span>escolha.</span></h1>
+      <p class="gateway-description">A história muda conforme as decisões.<br>Escolha sua pílula e descubra o que existe do outro lado.</p>
+    </div>
 
-          <div class="construct" role="img" aria-label="Ilustração de um cubo de código e terminal inspirados em Matrix">
-            <div class="construct-meta mono" aria-hidden="true"><span>THE CONSTRUCT</span><span>SYS. 001</span></div>
-            <canvas id="matrixCanvas" aria-hidden="true"></canvas>
-            <div class="construct-radial" aria-hidden="true"></div>
-            <div class="construct-cross cross-one" aria-hidden="true">+</div><div class="construct-cross cross-two" aria-hidden="true">+</div>
-            <svg class="construct-cube" viewBox="0 0 480 400" fill="none" aria-hidden="true">
-              <defs><linearGradient id="cubeFace" x1="70" y1="70" x2="400" y2="330" gradientUnits="userSpaceOnUse"><stop stop-color="#2dff7e" stop-opacity=".12"/><stop offset="1" stop-color="#2dff7e" stop-opacity=".01"/></linearGradient><linearGradient id="cubeStroke" x1="100" y1="80" x2="380" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#b3ffb4"/><stop offset=".55" stop-color="#49ed83"/><stop offset="1" stop-color="#153d24"/></linearGradient></defs>
-              <path d="m240 37 149 85v174l-149 85-149-85V122Z" fill="url(#cubeFace)" stroke="url(#cubeStroke)" stroke-width="1.2"/>
-              <g stroke="#50f18a" stroke-opacity=".25"><path d="m91 122 149 86 149-86M240 208v173M240 37v171M91 296l149-88 149 88"/><path d="m141 94 149 86v172M190 66l149 86v172M141 324V151l149-85M190 352V180l149-86M91 180l149 86 149-86M91 237l149 86 149-86M91 237l149-86 149 86M91 180l149-86 149 86"/></g>
-              <path d="m192 176-34 33 34 33m96-66 34 33-34 33m-37-85-23 104" stroke="#b5ffd0" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
-              <g fill="#a6ffc6"><circle cx="240" cy="37" r="3"/><circle cx="91" cy="122" r="3"/><circle cx="389" cy="122" r="3"/><circle cx="240" cy="381" r="3"/></g>
-            </svg>
-            <div class="code-window" aria-hidden="true">
-              <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>developer.js</span><svg class="icon small"><use href="#i-code"/></svg></div>
-              <pre><code><span class="code-muted">// Por trás da interface</span>
-<span class="code-keyword">const</span> developer = {
-  name: <span class="code-string">"Braian Saldanha"</span>,
-  focus: <span class="code-string">"Front-end"</span>,
-  mindset: <span class="code-string">"Sempre aprendendo"</span>
-};</code></pre>
-              <div class="terminal-output"><span>❯</span> transformando ideias em realidade<span class="terminal-cursor"></span></div>
-            </div>
-            <div class="construct-bottom mono"><span aria-hidden="true"><span class="status-dot"></span> HELLO, REAL WORLD.</span></div>
-          </div>
-        </div>
-        <div class="hero-bottom"><span class="mono">HTML · CSS · JAVASCRIPT</span><a href="#projetos">Explore além da superfície <span aria-hidden="true">↓</span></a><button id="effectsToggle" class="effects-toggle" type="button" aria-pressed="false" hidden><svg class="icon small" aria-hidden="true"><use href="#i-pause"/></svg><span>Pausar efeitos</span></button></div>
-      </div>
-    </section>
-
-    <section class="section projects-section" id="projetos" aria-labelledby="projectsTitle">
-      <div class="container">
-        <div class="section-heading"><div><p class="eyebrow"><span class="section-index">01 /</span> TRABALHOS SELECIONADOS</p><h2 id="projectsTitle">Fora da teoria.<br><span class="text-muted">Dentro do navegador.</span></h2></div><p class="section-description">Projetos que conectam o que eu aprendo com o que gosto de construir.</p></div>
-        <div class="project-filters" role="group" aria-label="Filtrar projetos" hidden><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>04</span></button><button class="filter-button" type="button" data-filter="dashboard" aria-pressed="false">Dashboards</button><button class="filter-button" type="button" data-filter="web" aria-pressed="false">Websites</button><button class="filter-button" type="button" data-filter="interactive" aria-pressed="false">Interativos</button><span class="filter-result mono" id="filterResult" role="status" aria-live="polite">4 projetos</span></div>
-
-        <div class="project-grid" id="projectGrid">
-          <article class="project-card project-featured" data-category="dashboard">
-            <div class="project-image project-image-ranking"><div class="project-browser mono" aria-hidden="true"><span class="browser-dots">● ● ●</span><span>ranking-lbi / dashboard</span><span>↗</span></div><img src="images/RankingLBI.webp" alt="Painel Ranking LBI em modo demonstração, com lançamento de quantidades, indicadores e ranking de performance da equipe" width="1200" height="824" loading="lazy" decoding="async"><span class="project-number mono" aria-hidden="true">PROJECT_01</span><span class="project-demo-note">Captura do modo demonstração</span></div>
-            <div class="project-body"><div class="project-category mono"><span class="featured-dot" aria-hidden="true"></span> EM DESTAQUE / DASHBOARD</div><h3>Ranking LBI <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></h3><p>Um painel de performance para acompanhar reuniões, agendamentos e pontuação da equipe. Inclui sugestão de distribuição de leads, atualização em tempo real e administração de registros.</p><ul class="tags" aria-label="Tecnologias do Ranking LBI"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vite</li><li>Supabase</li></ul><div class="project-links"><a href="https://ranking-lbi.vercel.app" target="_blank" rel="noopener noreferrer">Acessar projeto <span class="sr-only">Ranking LBI</span><svg class="icon small" aria-hidden="true"><use href="#i-external"/></svg></a><button class="details-button" type="button" data-project="ranking" hidden>Sobre o projeto <span aria-hidden="true">+</span></button></div></div>
-          </article>
-          <article class="project-card" data-category="web">
-            <div class="project-image project-image-moto"><div class="project-browser mono" aria-hidden="true"><span class="browser-dots">● ● ●</span><span>motomaniacs / website</span><span>↗</span></div><img src="images/MotoManiacs.webp" alt="Captura do site MotoManiacs, com identidade visual de oficina de preparação de motos" width="1200" height="595" loading="lazy" decoding="async"><span class="project-number mono" aria-hidden="true">PROJECT_02</span></div>
-            <div class="project-body"><div class="project-category mono">WEBSITE / PRESENÇA DIGITAL</div><h3>MotoManiacs <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></h3><p>Uma presença digital com a personalidade de uma oficina de preparações. Estrutura, identidade visual e navegação para apresentar o negócio.</p><ul class="tags" aria-label="Tecnologias do MotoManiacs"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-links"><a href="https://github.com/braiansaldanha-byte/MotoManiacs-Projeto" target="_blank" rel="noopener noreferrer"><svg class="icon small" aria-hidden="true"><use href="#i-github"/></svg> Ver código <span class="sr-only">do MotoManiacs</span><svg class="icon small" aria-hidden="true"><use href="#i-external"/></svg></a><button class="details-button" type="button" data-project="moto" hidden>Sobre o projeto <span aria-hidden="true">+</span></button></div></div>
-          </article>
-          <article class="project-card" data-category="web">
-            <div class="project-image project-image-basket"><div class="project-browser mono" aria-hidden="true"><span class="browser-dots">● ● ●</span><span>basket4life / blog</span><span>↗</span></div><img src="images/Basket4Life.webp" alt="Captura do blog Basket4Life com notícias e conteúdo sobre basquete" width="1200" height="595" loading="lazy" decoding="async"><span class="project-number mono" aria-hidden="true">PROJECT_03</span></div>
-            <div class="project-body"><div class="project-category mono">WEBSITE / CONTEÚDO EDITORIAL</div><h3>Basket4Life <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></h3><p>Minha paixão pelo basquete também vira interface. Um blog pensado para organizar conteúdo e aproximar os fãs do esporte.</p><ul class="tags" aria-label="Tecnologias do Basket4Life"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-links"><a href="https://github.com/braiansaldanha-byte/Blog-Basket4Life" target="_blank" rel="noopener noreferrer"><svg class="icon small" aria-hidden="true"><use href="#i-github"/></svg> Ver código <span class="sr-only">do Basket4Life</span><svg class="icon small" aria-hidden="true"><use href="#i-external"/></svg></a><button class="details-button" type="button" data-project="basket" hidden>Sobre o projeto <span aria-hidden="true">+</span></button></div></div>
-          </article>
-          <article class="project-card" data-category="interactive">
-            <div class="project-image project-image-shapes"><div class="project-browser mono" aria-hidden="true"><span class="browser-dots">● ● ●</span><span>formatos / interactive</span><span>↗</span></div><img src="images/Formatos.webp" alt="Captura do Jogo dos Formatos com formas geométricas coloridas e áreas de encaixe" width="1200" height="596" loading="lazy" decoding="async"><span class="project-number mono" aria-hidden="true">PROJECT_04</span></div>
-            <div class="project-body"><div class="project-category mono">INTERATIVO / EXPERIÊNCIA EDUCATIVA</div><h3>Jogo dos Formatos <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></h3><p>Aprender brincando, uma forma de cada vez. Um jogo de associação de figuras que explora lógica, eventos e interação com JavaScript.</p><ul class="tags" aria-label="Tecnologias do Jogo dos Formatos"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-links"><a href="https://github.com/braiansaldanha-byte/JogodosFormatos" target="_blank" rel="noopener noreferrer"><svg class="icon small" aria-hidden="true"><use href="#i-github"/></svg> Ver código <span class="sr-only">do Jogo dos Formatos</span><svg class="icon small" aria-hidden="true"><use href="#i-external"/></svg></a><button class="details-button" type="button" data-project="shapes" hidden>Sobre o projeto <span aria-hidden="true">+</span></button></div></div>
-          </article>
-        </div>
-        <a class="all-projects" href="https://github.com/braiansaldanha-byte?tab=repositories" target="_blank" rel="noopener noreferrer"><span>Há mais código do outro lado.</span><span>Todos os repositórios <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span></a>
-      </div>
-    </section>
-
-    <section class="section about-section" id="sobre" aria-labelledby="aboutTitle">
-      <div class="container about-grid">
-        <div class="about-heading"><p class="eyebrow"><span class="section-index">02 /</span> QUEM ESTÁ NO TECLADO</p><h2 id="aboutTitle">Olá, mundo.<br><span class="text-muted">Eu sou o Braian.</span></h2><div class="about-signature" aria-hidden="true">B<span>/</span>S<span class="signature-dot">.</span><div class="mono">HUMANO POR TRÁS DO CÓDIGO</div></div></div>
-        <div class="about-copy"><p class="about-lead">Gosto de entender como as coisas funcionam.<br>E de descobrir como fazê-las funcionar melhor.</p><p>Meu caminho no Front-end passa pelos estudos de programação no SENAI e pela prática: construir, testar, encontrar um problema e voltar ao código para resolver.</p><p>De um dashboard de performance a sites de motos, basquete e um jogo educativo, exploro diferentes formas de transformar conteúdo em experiências. Trabalho com HTML, CSS e JavaScript, com atenção à organização das interfaces e ao comportamento em diferentes telas.</p><p>Estou construindo minha trajetória em desenvolvimento e busco oportunidades para aprender com outras pessoas, contribuir com projetos e evoluir a cada entrega.</p><a class="inline-link" href="https://www.linkedin.com/in/braian-lopes-saldanha-8287331bb/" target="_blank" rel="noopener noreferrer">Conheça minha trajetória no LinkedIn <svg class="icon small" aria-hidden="true"><use href="#i-external"/></svg></a><div class="about-principles"><div><span class="mono">01.</span><strong>Curiosidade para aprender</strong></div><div><span class="mono">02.</span><strong>Cuidado para construir</strong></div><div><span class="mono">03.</span><strong>Constância para evoluir</strong></div></div></div>
-      </div>
-    </section>
-
-    <section class="section stack-section" id="stack" aria-labelledby="stackTitle">
-      <div class="container"><div class="section-heading"><div><p class="eyebrow"><span class="section-index">03 /</span> MEU AMBIENTE DE CONSTRUÇÃO</p><h2 id="stackTitle">As ferramentas.<br><span class="text-muted">E o que faço com elas.</span></h2></div><p class="section-description">Uma base em constante evolução, aplicada em projetos de verdade.</p></div><div class="stack-grid"><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">&lt;/&gt;</span><div><h3>HTML5</h3><p>Estrutura semântica e conteúdo organizado para a web.</p></div><span class="stack-type mono">ESTRUTURA</span></article><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">{ }</span><div><h3>CSS3</h3><p>Layouts, responsividade e identidade visual em cada detalhe.</p></div><span class="stack-type mono">INTERFACE</span></article><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">JS</span><div><h3>JavaScript</h3><p>Lógica, manipulação do DOM e interações no navegador.</p></div><span class="stack-type mono">INTERAÇÃO</span></article><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">git</span><div><h3>Git & GitHub</h3><p>Versionamento e organização da evolução dos projetos.</p></div><span class="stack-type mono">PROCESSO</span></article><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">B</span><div><h3>Bootstrap</h3><p>Componentes e sistemas de layout para criar interfaces.</p></div><span class="stack-type mono">COMPONENTES</span></article><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">S_</span><div><h3>Supabase</h3><p>Integração de dados, atualização em tempo real e autenticação.</p></div><span class="stack-type mono">DADOS</span></article><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">⚡</span><div><h3>Vite</h3><p>Ambiente de desenvolvimento e preparação de aplicações web.</p></div><span class="stack-type mono">FERRAMENTAS</span></article><article class="stack-item"><span class="stack-symbol mono" aria-hidden="true">↗</span><div><h3>Aprendizado contínuo</h3><p>Expandindo a base em React e novas práticas de Front-end.</p></div><span class="stack-type mono">EM EVOLUÇÃO</span></article></div></div>
-    </section>
-
-    <section class="choice-section" aria-labelledby="choiceTitle"><div class="container choice-inner"><div><p class="eyebrow">NADA É POR ACASO.</p><h2 id="choiceTitle">A escolha continua sendo sua.</h2><p>Um pouco de Matrix. Muito espaço para criar.</p></div><div class="pill-choices"><a class="pill-choice" href="#projetos"><span class="pill pill-red" aria-hidden="true"></span><span>Explorar o código<small>PÍLULA VERMELHA</small></span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a><button class="pill-choice" id="focusMode" type="button" aria-pressed="false" hidden><span class="pill pill-blue" aria-hidden="true"></span><span><span id="focusLabel">Ativar modo foco</span><small>PÍLULA AZUL · SEM ANIMAÇÕES</small></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div></div></section>
-
-    <section class="section contact-section" id="contato" aria-labelledby="contactTitle"><div class="container contact-grid"><div class="contact-copy"><p class="eyebrow"><span class="section-index">04 /</span> VAMOS NOS CONECTAR</p><h2 id="contactTitle">O próximo projeto<br>começa com um <span>olá<span aria-hidden="true">_</span></span></h2><p>Tem uma ideia, uma oportunidade ou um desafio?<br>Vamos conversar sobre o que podemos construir.</p><a class="button button-primary" href="mailto:braianlps77@gmail.com">Me envie um e-mail <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a><div class="contact-email"><a href="mailto:braianlps77@gmail.com">braianlps77@gmail.com</a><button class="copy-email" id="copyEmail" type="button" aria-label="Copiar endereço de e-mail" hidden><svg class="icon small" aria-hidden="true"><use href="#i-copy"/></svg></button></div><p class="copy-status mono" id="copyStatus" role="status" aria-live="polite"></p></div><div class="contact-links"><a href="https://github.com/braiansaldanha-byte" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span><strong>GitHub</strong><small>Projetos, estudos e código aberto</small></span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a><a href="https://www.linkedin.com/in/braian-lopes-saldanha-8287331bb/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg><span><strong>LinkedIn</strong><small>Trajetória e conexões profissionais</small></span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a><a href="mailto:braianlps77@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span><strong>E-mail</strong><small>Uma conversa pode ser o começo</small></span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div></section>
+    <div class="choices" aria-label="Escolha um dos dois caminhos">
+      <a class="pill-card blue-choice" href="errado.html" aria-label="Escolher pílula azul e seguir a simulação">
+        <span class="choice-code" aria-hidden="true"><span>01 / BLUE</span><span>↗</span></span>
+        <span class="pill-visual" aria-hidden="true"><span class="pill-halo"></span><span class="capsule"></span><span class="pill-shadow"></span></span>
+        <div class="choice-content"><h2>Pílula azul</h2><p>O mundo que você já conhece.<br>Continue na simulação e deixe o desconhecido para depois.</p><span class="choice-action">Seguir a simulação <span aria-hidden="true">→</span></span></div>
+      </a>
+      <span class="choice-or" aria-hidden="true">OU</span>
+      <a class="pill-card red-choice" href="portfolio.html" aria-label="Escolher pílula vermelha e entrar no portfólio">
+        <span class="choice-code" aria-hidden="true"><span>02 / RED</span><span>↗</span></span>
+        <span class="pill-visual" aria-hidden="true"><span class="pill-halo"></span><span class="capsule"></span><span class="pill-shadow"></span></span>
+        <div class="choice-content"><h2>Pílula vermelha</h2><p>Um universo de possibilidades.<br>Conheça meus projetos e veja até onde uma ideia pode chegar.</p><span class="choice-action">Entrar no portfólio <span aria-hidden="true">→</span></span></div>
+      </a>
+    </div>
+    <p class="choice-hint"><span aria-hidden="true">⌁</span> A escolha é sua. O próximo capítulo também.</p>
   </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><a class="brand-mark" href="#home" aria-label="Voltar ao início">b<span>/</span>s<span class="brand-dot">.</span></a><p>© <span id="year">2026</span> Braian Lopes Saldanha.<br><span>Desenvolvido com código, curiosidade e café.</span></p><a class="back-to-top" href="#home">Voltar ao topo <svg class="icon small" aria-hidden="true"><use href="#i-up"/></svg></a><span class="footer-easter mono">THERE IS NO SPOON.</span></div></footer>
-
-  <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle"><div class="dialog-heading"><span class="eyebrow">PROJECT / OVERVIEW</span><button class="dialog-close" type="button" aria-label="Fechar detalhes do projeto"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div><p class="project-category mono" id="dialogCategory"></p><h2 id="dialogTitle"></h2><p id="dialogDescription"></p><div class="dialog-detail"><h3>O desafio</h3><p id="dialogChallenge"></p><h3>O que explorei</h3><ul id="dialogLearnings"></ul></div><a class="button button-primary" id="dialogLink" target="_blank" rel="noopener noreferrer"><span id="dialogLinkLabel">Explorar repositório</span> <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></dialog>
+  <footer class="gateway-footer shell"><p>© <span id="gatewayYear">2026</span> Braian Lopes Saldanha.</p><p class="keyboard-hint">Use <kbd>Tab</kbd> para escolher e <kbd>Enter</kbd> para continuar.</p><span class="footer-code" aria-hidden="true">FOLLOW THE WHITE RABBIT.</span></footer>
 </body>
 </html>

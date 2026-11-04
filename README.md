@@ -1,6 +1,8 @@
 # Braian Saldanha — Portfólio Front-end
 
-Portfólio pessoal inspirado na estética de Matrix, construído com HTML, CSS e JavaScript puro. A apresentação profissional, os projetos e os contatos ficam acessíveis diretamente na página inicial.
+Portfólio pessoal inspirado na estética de Matrix, construído com HTML, CSS e JavaScript puro. A página inicial recupera a escolha entre as duas pílulas: a vermelha abre o portfólio profissional e a azul leva a uma tela de erro fictícia da simulação.
+
+![Entrada Matrix com a escolha das pílulas](images/matrix-entrance-preview.jpg)
 
 ## Executar localmente
 
@@ -17,11 +19,11 @@ Abra `http://localhost:8000`. Também é possível abrir `index.html` diretament
 - Layout responsivo, navegação por âncoras e menu de celular com suporte a teclado.
 - Quatro projetos com capturas reais, links para os repositórios, filtros por categoria e detalhes em um diálogo nativo.
 - Chuva de código em canvas, cubo vetorial e terminal ilustrativo, sem GIFs ou bibliotecas externas.
-- Pílula vermelha para explorar os projetos e pílula azul para alternar o modo foco.
+- Entrada com pílulas em CSS, chuva de código e escolhas acessíveis por teclado ou toque: vermelha → `portfolio.html`; azul → `errado.html`. A tela azul permite reiniciar a escolha ou seguir para o portfólio.
 - Respeito a `prefers-reduced-motion`, preferência de efeitos salva quando o armazenamento está disponível, e animação suspensa fora da tela ou em abas ocultas.
 - Contato direto por e-mail, GitHub e LinkedIn. A cópia do endereço confirma o resultado real da API de clipboard; se a permissão for negada, orienta a cópia manual.
 - Conteúdo e links disponíveis sem JavaScript; controles que exigem JavaScript só aparecem quando funcionais.
-- Rotas antigas `portfolio.html` e `errado.html` preservadas, inclusive com âncoras e parâmetros. A segunda abre `index.html?modo=foco`.
+- Links antigos de seção, como `/#projetos`, continuam funcionando: a entrada direciona as âncoras conhecidas para `portfolio.html#projetos`, preservando os parâmetros. O acesso normal à raiz sempre mostra as duas pílulas.
 
 O Ranking LBI aparece em destaque, com uma captura do modo demonstração, tecnologias verificadas no projeto e um link para a aplicação publicada. Os demais projetos mantêm os links para seus repositórios.
 
@@ -29,14 +31,14 @@ O Ranking LBI aparece em destaque, com uma captura do modo demonstração, tecno
 
 | Arquivo | Responsabilidade |
 | --- | --- |
-| `index.html` | Conteúdo, navegação, projetos, stack e contato |
+| `index.html`, `stylestart.css`, `scriptstart.js` | Entrada Matrix com escolha das pílulas |
 | `style.css` | Identidade visual, responsividade e movimento reduzido |
 | `script.js` | Menu, filtros, diálogo, modo foco, canvas e clipboard |
 | `images/` | Capturas dos projetos e favicon |
-| `portfolio.html`, `scriptstart.js` | Compatibilidade com a antiga página de portfólio |
-| `errado.html`, `errado.js` | Compatibilidade com a antiga escolha da pílula azul |
+| `portfolio.html` | Conteúdo, navegação, projetos, stack e contato |
+| `errado.html`, `errado.css`, `errado.js` | Tela azul fictícia e opções para voltar ou seguir ao portfólio |
 
-Para editar projetos, atualize os cards em `index.html` e os detalhes no objeto `projects` em `script.js`. Para mudar contatos, atualize os links no HTML e o endereço na ação de cópia em `script.js`.
+Para editar projetos, atualize os cards em `portfolio.html` e os detalhes no objeto `projects` em `script.js`. Para mudar contatos, atualize os links no HTML e o endereço na ação de cópia em `script.js`.
 
 ## Publicação
 
