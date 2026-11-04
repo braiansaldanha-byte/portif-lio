@@ -15,13 +15,15 @@ Abra `http://localhost:8000`. Também é possível abrir `index.html` diretament
 ## Recursos
 
 - Layout responsivo, navegação por âncoras e menu de celular com suporte a teclado.
-- Projetos com capturas reais, links para os repositórios, filtros por categoria e detalhes em um diálogo nativo.
+- Quatro projetos com capturas reais, links para os repositórios, filtros por categoria e detalhes em um diálogo nativo.
 - Chuva de código em canvas, cubo vetorial e terminal ilustrativo, sem GIFs ou bibliotecas externas.
 - Pílula vermelha para explorar os projetos e pílula azul para alternar o modo foco.
 - Respeito a `prefers-reduced-motion`, preferência de efeitos salva quando o armazenamento está disponível, e animação suspensa fora da tela ou em abas ocultas.
 - Contato direto por e-mail, GitHub e LinkedIn. A cópia do endereço confirma o resultado real da API de clipboard; se a permissão for negada, orienta a cópia manual.
 - Conteúdo e links disponíveis sem JavaScript; controles que exigem JavaScript só aparecem quando funcionais.
 - Rotas antigas `portfolio.html` e `errado.html` preservadas, inclusive com âncoras e parâmetros. A segunda abre `index.html?modo=foco`.
+
+O Ranking LBI aparece em destaque, com uma captura do modo demonstração, tecnologias verificadas no projeto e um link para a aplicação publicada. Os demais projetos mantêm os links para seus repositórios.
 
 ## Organização
 

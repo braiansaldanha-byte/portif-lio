@@ -55,6 +55,14 @@
   });
 
   const projects = {
+    ranking: {
+      title: 'Ranking LBI', category: 'DASHBOARD / PERFORMANCE DA EQUIPE',
+      description: 'Uma aplicação web para centralizar reuniões, agendamentos e pontuação da equipe de assessoria, com atualização em tempo real e uma área administrativa.',
+      challenge: 'Transformar registros de atividades em um ranking claro e em uma sugestão proporcional de distribuição de leads, mantendo histórico e comprovantes das reuniões.',
+      learnings: ['Construir um dashboard responsivo com indicadores, filtros de período e histórico mensal.', 'Integrar banco de dados, atualização em tempo real e armazenamento de comprovantes com Supabase.', 'Organizar pontuação, distribuição de leads e administração autenticada dos registros.'],
+      url: 'https://ranking-lbi.vercel.app',
+      linkLabel: 'Acessar Ranking LBI'
+    },
     moto: {
       title: 'MotoManiacs', category: 'WEBSITE / PRESENÇA DIGITAL',
       description: 'Uma página comercial para apresentar uma oficina de preparação de motos com uma identidade visual própria.',
@@ -95,6 +103,7 @@
           return item;
         }));
         document.getElementById('dialogLink').href = project.url;
+        document.getElementById('dialogLinkLabel').textContent = project.linkLabel || 'Explorar repositório';
         lastProjectButton = button;
         dialog.showModal();
       });
