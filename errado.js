@@ -1,14 +1,8 @@
-        document.addEventListener('keydown', function() {
-            window.location.href = 'index.html';
-        });
-
-        document.addEventListener('keydown', function(event) {
-            if (event.ctrlKey && event.altKey && event.key === 'Delete') {
-                location.reload(); 
-            } else {
-                window.location.href = 'index.html'; 
-            }
-        });
-        
-
-     
+// Existing blue-pill links now open an accessible, calm version of the portfolio.
+(() => {
+  const destination = new URL('index.html', location.href);
+  destination.search = location.search;
+  destination.searchParams.set('modo', 'foco');
+  destination.hash = location.hash;
+  location.replace(destination.href);
+})();
