@@ -133,7 +133,6 @@
   // Effects are optional, remember the choice, and respect system preferences.
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const effectButton = document.getElementById('effectsToggle');
-  const focusButton = document.getElementById('focusMode');
   let storedChoice;
   try { storedChoice = localStorage.getItem('braian-portfolio-effects'); } catch { /* Storage can be disabled. */ }
   let paused = motionPreference.matches || new URLSearchParams(location.search).get('modo') === 'foco' || storedChoice === 'paused';
@@ -145,16 +144,11 @@
     effectButton.setAttribute('aria-label', 'Modo foco, sem animações');
     effectButton.querySelector('span').textContent = paused ? 'Retomar efeitos' : 'Pausar efeitos';
     effectButton.querySelector('use').setAttribute('href', paused ? '#i-play' : '#i-pause');
-    focusButton.setAttribute('aria-pressed', String(paused));
-    focusButton.setAttribute('aria-label', 'Modo foco, sem animações');
-    document.getElementById('focusLabel').textContent = paused ? 'Modo foco ativado' : 'Ativar modo foco';
     if (motionPreference.matches) {
       effectButton.querySelector('span').textContent = 'Movimento reduzido';
       effectButton.disabled = true;
-      focusButton.disabled = true;
     } else {
       effectButton.disabled = false;
-      focusButton.disabled = false;
     }
     if (persist) {
       try { localStorage.setItem('braian-portfolio-effects', paused ? 'paused' : 'playing'); } catch { /* The page also works without storage. */ }
@@ -162,9 +156,7 @@
     syncRain();
   }
   effectButton.hidden = false;
-  focusButton.hidden = false;
   effectButton.addEventListener('click', () => setEffects(!paused));
-  focusButton.addEventListener('click', () => setEffects(!paused));
   motionPreference.addEventListener('change', () => {
     let preference;
     try { preference = localStorage.getItem('braian-portfolio-effects'); } catch { /* Optional. */ }
